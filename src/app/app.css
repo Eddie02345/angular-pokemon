@@ -28,17 +28,6 @@
   font-size: 0.8rem;
   color: var(--ctp-overlay1);
 }
-.footer-easter-egg {
-  margin: 0.5rem 0 0;
-  font-size: 0.75rem;
-  color: var(--ctp-overlay1);
-  text-align: center;
-}
-
-.prof-note {
-  color: var(--ctp-sapphire);
-  margin-left: 0.25rem;
-}
 
 .footer-sub {
   color: var(--ctp-surface2);
