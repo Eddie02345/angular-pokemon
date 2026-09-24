@@ -1,1 +1,26 @@
-<p>hoenn works!</p>
+<section class="region-section">
+  <div class="section-header">
+    <div>
+      <h2 class="region-title">Hoenn Region</h2>
+      <p class="region-description">
+        Silver Conference Gym Leaders, specialty types, and battle rosters.
+      </p>
+    </div>
+    <span class="region-badge region-badge-hoenn">9 Sanctioned Gyms</span>
+  </div>
+
+  @if (statusMessage() !== 'Select a Gym Leader to register your challenge.') {
+    <div class="notice-bar">
+      {{ statusMessage() }}
+    </div>
+  }
+
+  <div class="panels-grid">
+    @for (item of hoennLeaders(); track item.name) {
+      <app-leader-info 
+        [leader]="item" 
+        (challengeIssued)="onChallengeReceived($event)" 
+      />
+    }
+  </div>
+</section>
