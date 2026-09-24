@@ -11,15 +11,10 @@ import { HoennService } from '../../services/hoenn';
   templateUrl: './hoenn.html',
 })
 export class Hoenn {
-  private hoennService = inject(HoennService);
+ private hoennService = inject(HoennService);
+  hoennLeaders = this.hoennService.leaders;
 
-  // Expose the read-only signal to the template
-  hoennLeaders = this.hoennService.hoennLeaders;
 
-  statusMessage = signal('Select a Gym Leader to register your challenge.');
-
-  onChallengeReceived(eventMessage: string): void {
-    this.statusMessage.set(eventMessage);
   }
-}
+
 

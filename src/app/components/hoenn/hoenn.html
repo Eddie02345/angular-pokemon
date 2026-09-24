@@ -6,21 +6,39 @@
         Silver Conference Gym Leaders, specialty types, and battle rosters.
       </p>
     </div>
-    <span class="region-badge region-badge-hoenn">8 Sanctioned Gyms</span>
-  </div>
 
-  @if (statusMessage() !== 'Select a Gym Leader to register your challenge.') {
-    <div class="notice-bar">
-      {{ statusMessage() }}
-    </div>
-  }
+    <span class="region-badge region-badge-johto">
+      8 Sanctioned Gyms
+    </span>
+  </div>
 
   <div class="panels-grid">
     @for (item of hoennLeaders(); track item.name) {
-      <app-leader-info 
-        [leader]="item" 
-        (challengeIssued)="onChallengeReceived($event)" 
-      />
+      <article class="gym-panel">
+        <div class="panel-header">
+          <div>
+            <div class="header-line">
+              <h3 class="leader-name">{{ item.name }}</h3>
+            </div>
+
+            <p class="gym-location">{{ item.town }}</p>
+          </div>
+
+          <div class="badge-tag">
+            {{ item.badge }}
+          </div>
+        </div>
+
+        <div class="team-container">
+          <span class="label">Specialty</span>
+          <p class="team-roster">{{ item.specialty }}</p>
+        </div>
+
+        <div class="team-container">
+          <span class="label">Pokémon Team</span>
+          <p class="team-roster">{{ item.pokemonTeam }}</p>
+        </div>
+      </article>
     }
   </div>
 </section>
