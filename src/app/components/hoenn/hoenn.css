@@ -1,0 +1,57 @@
+.region-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--ctp-surface0);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.region-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ctp-text);
+  letter-spacing: -0.02em;
+}
+
+.region-description {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ctp-subtext0);
+}
+
+.region-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.region-badge-johto {
+  background-color: var(--ctp-surface0);
+  border: 1px solid var(--ctp-peach);
+  color: var(--ctp-peach);
+}
+
+.notice-bar {
+  background-color: var(--ctp-mantle);
+  border-left: 3px solid var(--ctp-sapphire);
+  padding: 0.65rem 1rem;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.82rem;
+  color: var(--ctp-subtext1);
+}
+
+.panels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
