@@ -37,8 +37,8 @@
 
 .region-badge-hoenn {
   background-color: var(--ctp-surface0);
-  border: 1px solid var(--ctp-peach);
-  color: var(--ctp-peach);
+  border: 1px solid var(--ctp-red);
+  color: var(--ctp-red);
 }
 
 .notice-bar {
@@ -99,7 +99,7 @@
   font-weight: 600;
   background-color: var(--ctp-mantle);
   border: 1px solid var(--ctp-surface1);
-  color: var(--ctp-peach);
+  color: var(--ctp-red);
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
   white-space: nowrap;
