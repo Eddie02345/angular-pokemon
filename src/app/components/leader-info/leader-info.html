@@ -1,0 +1,46 @@
+<article class="gym-panel" [style.borderLeftColor]="leader().typeColor">
+  <div class="panel-header">
+    <div>
+      <div class="header-line">
+        <h3 class="leader-name">{{ leader().name }}</h3>
+        <span class="type-indicator" [style.color]="leader().typeColor">
+          {{ leader().gymType }}
+        </span>
+        <span class="leader-age">Age: {{ leader().age }}</span>
+      </div>
+      <p class="gym-location">{{ leader().location }}</p>
+    </div>
+
+    <div class="badge-tag" [style.color]="leader().typeColor">
+      {{ leader().gymBadge }}
+    </div>
+  </div>
+
+  <div class="team-container" [style.borderLeftColor]="leader().typeColor">
+    <span class="label">Pokémon Team</span>
+    <p class="team-roster">{{ leader().pokemonTeam }}</p>
+  </div>
+
+  @if (showMonologue()) {
+    <div class="motto-container" [style.borderLeftColor]="leader().typeColor">
+      <span class="label">Motto</span>
+      <p class="motto-text">&ldquo;{{ leader().motto }}&rdquo;</p>
+    </div>
+  }
+
+  <div class="action-buttons">
+    <button 
+      type="button" 
+      class="motto-btn" 
+      (click)="toggleMonologue()">
+      {{ showMonologue() ? 'Hide Motto' : 'Motto' }}
+    </button>
+
+    <button 
+      type="button" 
+      class="challenge-btn" 
+      (click)="issueChallenge()">
+      Challenge Gym
+    </button>
+  </div>
+</article>

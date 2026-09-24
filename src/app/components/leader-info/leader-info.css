@@ -1,0 +1,134 @@
+.gym-panel {
+  background-color: var(--ctp-surface0);
+  border: 1px solid var(--ctp-surface1);
+  border-left: 3px solid var(--ctp-surface2); /* Dynamically bound by [style.borderLeftColor] */
+  border-radius: 6px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.header-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.leader-name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ctp-text);
+}
+
+.type-indicator {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.leader-age {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ctp-subtext0);
+  background-color: var(--ctp-mantle);
+  border: 1px solid var(--ctp-surface1);
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+}
+
+.gym-location {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ctp-subtext0);
+}
+
+.badge-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background-color: var(--ctp-mantle);
+  border: 1px solid var(--ctp-surface1);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  /* Color dynamically bound by [style.color] */
+}
+
+.team-container,
+.motto-container {
+  background-color: var(--ctp-mantle);
+  border: 1px solid var(--ctp-surface1);
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.motto-container {
+  border-left: 3px solid var(--ctp-surface2); /* Dynamically bound by [style.borderLeftColor] */
+}
+
+.team-container .label,
+.motto-container .label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ctp-overlay1);
+}
+
+.team-roster {
+  margin: 0;
+  font-size: 0.83rem;
+  color: var(--ctp-text);
+  line-height: 1.4;
+}
+
+.motto-text {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--ctp-subtext1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.motto-btn,
+.challenge-btn {
+  flex: 1;
+  background-color: var(--ctp-mantle);
+  border: 1px solid var(--ctp-surface1);
+  color: var(--ctp-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.motto-btn:hover {
+  background-color: var(--ctp-surface1);
+  border-color: var(--ctp-surface2);
+  color: var(--ctp-blue);
+}
+
+.challenge-btn:hover {
+  background-color: var(--ctp-surface1);
+  border-color: var(--ctp-surface2);
+  color: var(--ctp-sapphire);
+}
